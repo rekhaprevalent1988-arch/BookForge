@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rekhaprevalent1988-arch.github.io/How-to-Make-a-Book/sitemap.xml
