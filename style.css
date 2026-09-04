@@ -3945,3 +3945,1340 @@ div[id] {
   }
 
 }
+/* =========================================================
+   BOOKFORGE — ABOUT / PUBLISHING / MY BOOKS UPGRADE
+   Paste at the VERY BOTTOM of style.css
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   PAGE SECTIONS
+--------------------------------------------------------- */
+
+.section {
+  padding: 88px 0;
+}
+
+.section-soft {
+  background:
+    linear-gradient(180deg, #f7f9ff 0%, #f4f7fc 100%);
+}
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 42px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.section-heading p {
+  margin: 0;
+  max-width: 720px;
+  color: var(--text-soft);
+  line-height: 1.8;
+}
+
+
+/* ---------------------------------------------------------
+   TWO COLUMN LAYOUT
+--------------------------------------------------------- */
+
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+
+/* ---------------------------------------------------------
+   UNIVERSAL CONTENT CARDS
+--------------------------------------------------------- */
+
+.content-card {
+  min-width: 0;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+  border-color: #d3dcf3;
+  box-shadow: var(--shadow);
+}
+
+.content-card h2,
+.content-card h3 {
+  color: var(--text);
+}
+
+.content-card h2 {
+  margin: 8px 0 14px;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.content-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.18rem;
+  line-height: 1.3;
+}
+
+.content-card p {
+  margin-bottom: 13px;
+  color: var(--text-soft);
+  line-height: 1.75;
+}
+
+.content-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ---------------------------------------------------------
+   CARD GRID
+--------------------------------------------------------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+
+/* ---------------------------------------------------------
+   INFO CARDS
+--------------------------------------------------------- */
+
+.info-card {
+  position: relative;
+  min-width: 0;
+  padding: 27px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  border-color: #cfd9f2;
+  box-shadow: var(--shadow);
+}
+
+.info-card h3 {
+  margin: 14px 0 9px;
+  font-size: 1.12rem;
+  line-height: 1.35;
+}
+
+.info-card p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: .9rem;
+  line-height: 1.72;
+}
+
+.card-number {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+  background: var(--primary-light);
+  color: var(--primary);
+
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .03em;
+}
+
+
+/* ---------------------------------------------------------
+   LINKS INSIDE CARDS
+--------------------------------------------------------- */
+
+.resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 18px;
+
+  color: var(--primary);
+  font-size: .88rem;
+  font-weight: 800;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+.resource-link:hover {
+  color: var(--primary-dark);
+  transform: translateX(3px);
+}
+
+
+/* ---------------------------------------------------------
+   CHECK LISTS
+--------------------------------------------------------- */
+
+.check-list {
+  display: grid;
+  gap: 10px;
+  margin: 17px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+
+  padding: 12px 14px 12px 39px;
+
+  background: #f8faff;
+  border: 1px solid #e6ebf4;
+  border-radius: 11px;
+
+  color: var(--text-soft);
+  font-size: .87rem;
+  line-height: 1.5;
+}
+
+.check-list li::before {
+  content: "✓";
+
+  position: absolute;
+  left: 13px;
+  top: 10px;
+
+  width: 20px;
+  height: 20px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--primary-light);
+  color: var(--primary);
+
+  font-size: .7rem;
+  font-weight: 900;
+}
+
+
+/* ---------------------------------------------------------
+   ABOUT JOURNEY
+--------------------------------------------------------- */
+
+.about-journey {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.about-journey .roadmap-card {
+  min-width: 0;
+  padding: 25px;
+
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 19px;
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.about-journey .roadmap-card:hover {
+  transform: translateY(-4px);
+  border-color: #d3dcf3;
+  box-shadow: var(--shadow);
+}
+
+.about-journey .roadmap-number {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+
+  background: var(--primary-light);
+  color: var(--primary);
+
+  font-size: .78rem;
+  font-weight: 850;
+}
+
+.about-journey .roadmap-content {
+  min-width: 0;
+}
+
+.about-journey .roadmap-content h3 {
+  margin: 2px 0 7px;
+  font-size: 1.1rem;
+}
+
+.about-journey .roadmap-content p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: .88rem;
+  line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   CTA CARDS
+--------------------------------------------------------- */
+
+.cta-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 48px;
+  border-radius: 26px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(124,77,255,.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(49,87,213,.10),
+      transparent 35%
+    ),
+    #fff;
+
+  border: 1px solid #dfe5f1;
+  box-shadow: var(--shadow);
+
+  text-align: center;
+}
+
+.cta-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: inherit;
+}
+
+.cta-card .eyebrow {
+  margin-bottom: 12px;
+}
+
+.cta-card h2 {
+  position: relative;
+  margin-bottom: 15px;
+
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.cta-card p {
+  position: relative;
+
+  max-width: 720px;
+  margin: 0 auto 12px;
+
+  color: var(--text-soft);
+  line-height: 1.8;
+}
+
+.cta-card .hero-actions {
+  position: relative;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+
+/* ---------------------------------------------------------
+   AUTHOR NOTE
+--------------------------------------------------------- */
+
+.author-note {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.author-note .resource-link {
+  align-self: flex-start;
+}
+
+
+/* ---------------------------------------------------------
+   MY BOOKS — LARGE SHOWCASE
+--------------------------------------------------------- */
+
+.book-showcase {
+  display: grid;
+  grid-template-columns: minmax(260px, .72fr) minmax(0, 1.28fr);
+  gap: 42px;
+  align-items: center;
+
+  margin-bottom: 30px;
+  padding: 34px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+
+  overflow: hidden;
+}
+
+.book-showcase:last-child {
+  margin-bottom: 0;
+}
+
+.book-showcase-reverse {
+  grid-template-columns: minmax(0, 1.28fr) minmax(260px, .72fr);
+}
+
+.book-showcase-reverse .book-cover-column {
+  order: 2;
+}
+
+.book-showcase-reverse .book-details {
+  order: 1;
+}
+
+
+/* ---------------------------------------------------------
+   BOOK COVER
+--------------------------------------------------------- */
+
+.book-cover-column {
+  min-width: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-cover-frame {
+  width: min(100%, 310px);
+  padding: 10px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f5f7fc,
+      #e9edf6
+    );
+
+  border: 1px solid #dce2ee;
+  border-radius: 17px;
+
+  box-shadow:
+    0 20px 45px rgba(31,48,87,.12);
+}
+
+.book-cover-frame img {
+  width: 100%;
+  aspect-ratio: .68;
+
+  object-fit: cover;
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 15px 30px rgba(25,39,72,.18);
+}
+
+
+/* ---------------------------------------------------------
+   BOOK DETAILS
+--------------------------------------------------------- */
+
+.book-details {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-label {
+  display: inline-flex;
+  align-self: flex-start;
+
+  padding: 7px 10px;
+  margin-bottom: 13px;
+
+  background: var(--primary-light);
+  color: var(--primary);
+
+  border: 1px solid #dce5ff;
+  border-radius: 8px;
+
+  font-size: .67rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+}
+
+.book-details h2 {
+  margin-bottom: 6px;
+
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.book-author {
+  margin-bottom: 20px;
+
+  color: var(--primary);
+  font-size: .9rem;
+  font-weight: 750;
+}
+
+.book-details > p:not(.book-author) {
+  margin-bottom: 13px;
+
+  color: var(--text-soft);
+  line-height: 1.78;
+}
+
+.book-details > p:last-of-type {
+  margin-bottom: 0;
+}
+
+
+/* ---------------------------------------------------------
+   BOOK FACTS
+--------------------------------------------------------- */
+
+.book-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+
+  margin-top: 24px;
+}
+
+.book-facts > div {
+  min-width: 0;
+
+  padding: 13px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.book-facts span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--text-light);
+  font-size: .65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.book-facts strong {
+  display: block;
+
+  color: var(--text);
+  font-size: .78rem;
+  line-height: 1.4;
+}
+
+.book-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 23px;
+}
+
+
+/* ---------------------------------------------------------
+   EXAMPLE BOX
+--------------------------------------------------------- */
+
+.example-box {
+  margin-top: 22px;
+  padding: 24px 26px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7f9ff,
+      #fbf9ff
+    );
+
+  border: 1px dashed #cbd5ea;
+  border-radius: 17px;
+}
+
+.example-box strong {
+  color: var(--text);
+}
+
+.example-box p {
+  margin-top: 9px;
+  color: var(--text-soft);
+  line-height: 1.75;
+}
+
+
+/* ---------------------------------------------------------
+   PUBLISHING PLATFORM CARDS
+--------------------------------------------------------- */
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.platform-card {
+  position: relative;
+  min-width: 0;
+
+  padding: 30px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 21px;
+  box-shadow: var(--shadow-sm);
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.platform-card:hover {
+  transform: translateY(-5px);
+  border-color: #cfd9f2;
+  box-shadow: var(--shadow);
+}
+
+.platform-card.featured {
+  border-color: #bfcdf5;
+  box-shadow: 0 15px 40px rgba(49,87,213,.11);
+}
+
+.platform-card.featured::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--accent)
+  );
+
+  border-radius: 21px 21px 0 0;
+}
+
+.platform-label {
+  display: inline-flex;
+  align-self: flex-start;
+
+  padding: 6px 9px;
+  margin-bottom: 13px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+
+  color: var(--text-light);
+
+  font-size: .63rem;
+  font-weight: 850;
+  letter-spacing: .07em;
+}
+
+.platform-card h3 {
+  margin-bottom: 9px;
+  font-size: 1.35rem;
+}
+
+.platform-card p {
+  color: var(--text-soft);
+  font-size: .88rem;
+  line-height: 1.72;
+}
+
+.platform-card ul {
+  display: grid;
+  gap: 8px;
+
+  margin: 18px 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.platform-card li {
+  position: relative;
+
+  padding-left: 25px;
+
+  color: var(--text-soft);
+  font-size: .84rem;
+}
+
+.platform-card li::before {
+  content: "✓";
+
+  position: absolute;
+  left: 0;
+  top: 1px;
+
+  color: var(--success);
+  font-weight: 900;
+}
+
+.platform-card .resource-link {
+  margin-top: auto;
+}
+
+.small-note {
+  margin-top: auto;
+  padding-top: 15px;
+
+  color: var(--text-light) !important;
+  font-size: .76rem !important;
+  line-height: 1.6 !important;
+}
+
+
+/* ---------------------------------------------------------
+   TIMELINE
+--------------------------------------------------------- */
+
+.timeline {
+  display: grid;
+  gap: 14px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+
+  padding: 22px 24px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(3px);
+  border-color: #d3dcf3;
+  box-shadow: var(--shadow);
+}
+
+.timeline-item > span {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+
+  background: var(--primary-light);
+  color: var(--primary);
+
+  font-size: .75rem;
+  font-weight: 850;
+}
+
+.timeline-item h3 {
+  margin: 2px 0 6px;
+  font-size: 1.05rem;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: .88rem;
+  line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   STEP ROWS
+--------------------------------------------------------- */
+
+.step-row {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 15px;
+  align-items: start;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.step-row:first-child {
+  padding-top: 0;
+}
+
+.step-row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.step-number {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  background: var(--primary-light);
+  color: var(--primary);
+
+  font-size: .75rem;
+  font-weight: 850;
+}
+
+.step-row h3 {
+  margin: 1px 0 5px;
+  font-size: 1rem;
+}
+
+.step-row p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: .86rem;
+  line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   RESOURCE GRID
+--------------------------------------------------------- */
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.resource-card {
+  min-width: 0;
+
+  padding: 22px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  box-shadow: var(--shadow-sm);
+
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  border-color: #cfd9f2;
+  box-shadow: var(--shadow);
+}
+
+.resource-card strong {
+  font-size: .98rem;
+}
+
+.resource-card span {
+  color: var(--primary);
+  font-size: .8rem;
+  font-weight: 750;
+}
+
+
+/* ---------------------------------------------------------
+   RESOURCE BANNER
+--------------------------------------------------------- */
+
+.resource-banner {
+  margin-top: 24px;
+
+  padding: 23px 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5f8ff,
+      #fbf9ff
+    );
+
+  border: 1px solid #dce3f2;
+  border-radius: 18px;
+}
+
+.resource-banner strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.resource-banner p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: .83rem;
+}
+
+
+/* ---------------------------------------------------------
+   LARGE FINAL CHECKLIST
+--------------------------------------------------------- */
+
+.checklist-large {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.checklist-large label {
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 15px 17px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+
+  color: var(--text-soft);
+  font-size: .86rem;
+  line-height: 1.5;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    border-color .2s ease;
+}
+
+.checklist-large label:hover {
+  background: var(--surface);
+  border-color: #cfd9f2;
+}
+
+.checklist-large input {
+  flex: 0 0 auto;
+
+  width: 18px;
+  height: 18px;
+
+  margin-top: 1px;
+
+  accent-color: var(--primary);
+}
+
+
+/* ---------------------------------------------------------
+   WARNING BOX
+--------------------------------------------------------- */
+
+.warning-box {
+  margin-top: 24px;
+  padding: 18px 21px;
+
+  background: #fff8e8;
+  border: 1px solid #f1dfb2;
+  border-left: 4px solid #d39400;
+
+  border-radius: 13px;
+
+  color: #765200;
+  font-size: .86rem;
+  line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   TABLES
+--------------------------------------------------------- */
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-table th {
+  background: var(--surface);
+
+  color: var(--text);
+  font-size: .76rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.comparison-table td {
+  color: var(--text-soft);
+  font-size: .84rem;
+  line-height: 1.55;
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.comparison-table tbody tr:hover {
+  background: #fafbfe;
+}
+
+
+/* ---------------------------------------------------------
+   HERO CARD
+--------------------------------------------------------- */
+
+.hero-card {
+  padding: 28px;
+
+  background: rgba(255,255,255,.92);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+
+  box-shadow: var(--shadow);
+
+  backdrop-filter: blur(12px);
+}
+
+.hero-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-card-top span {
+  color: var(--text-light);
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .1em;
+}
+
+.hero-card-top strong {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.hero-checklist {
+  display: grid;
+  gap: 10px;
+}
+
+.hero-checklist div {
+  padding: 11px 13px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  color: var(--text-soft);
+  font-size: .84rem;
+  font-weight: 650;
+}
+
+
+/* ---------------------------------------------------------
+   GENERAL VERTICAL RHYTHM
+--------------------------------------------------------- */
+
+.section-heading + .card-grid,
+.section-heading + .two-column,
+.section-heading + .platform-grid,
+.section-heading + .timeline,
+.section-heading + .resource-grid,
+.section-heading + .checklist-large {
+  margin-top: 0;
+}
+
+.two-column + .example-box {
+  margin-top: 22px;
+}
+
+
+/* ---------------------------------------------------------
+   ABOUT / MY BOOKS TEXT RHYTHM
+--------------------------------------------------------- */
+
+.section p {
+  max-width: none;
+}
+
+.section-heading {
+  text-align: left;
+}
+
+.section-heading .eyebrow {
+  display: inline-flex;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .platform-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .book-showcase,
+  .book-showcase-reverse {
+    grid-template-columns: minmax(190px, .65fr) minmax(0, 1.35fr);
+    gap: 25px;
+  }
+
+  .book-showcase-reverse .book-cover-column {
+    order: 2;
+  }
+
+  .book-showcase-reverse .book-details {
+    order: 1;
+  }
+
+  .about-journey {
+    grid-template-columns: 1fr;
+  }
+
+  .checklist-large {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .section {
+    padding: 65px 0;
+  }
+
+  .two-column,
+  .card-grid,
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .content-card,
+  .info-card,
+  .platform-card {
+    padding: 23px;
+  }
+
+  .cta-card {
+    padding: 32px 22px;
+  }
+
+  .book-showcase,
+  .book-showcase-reverse {
+    grid-template-columns: 1fr;
+    padding: 23px;
+  }
+
+  .book-showcase-reverse .book-cover-column,
+  .book-showcase-reverse .book-details {
+    order: initial;
+  }
+
+  .book-cover-frame {
+    width: min(78%, 280px);
+  }
+
+  .book-details h2 {
+    font-size: 2rem;
+  }
+
+  .book-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-item {
+    grid-template-columns: 43px minmax(0, 1fr);
+    padding: 18px;
+  }
+
+  .timeline-item > span {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-journey .roadmap-card {
+    grid-template-columns: 45px minmax(0, 1fr);
+    padding: 20px;
+  }
+
+  .about-journey .roadmap-number {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .section {
+    padding: 55px 0;
+  }
+
+  .hero-card {
+    padding: 21px;
+  }
+
+  .content-card,
+  .info-card,
+  .platform-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .book-showcase {
+    border-radius: 19px;
+  }
+
+  .book-cover-frame {
+    width: 88%;
+  }
+
+  .book-actions .btn {
+    width: 100%;
+  }
+
+  .cta-card .hero-actions {
+    flex-direction: column;
+  }
+
+  .cta-card .btn {
+    width: 100%;
+  }
+}
